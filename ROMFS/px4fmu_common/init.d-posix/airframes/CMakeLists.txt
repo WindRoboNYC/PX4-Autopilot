@@ -95,6 +95,8 @@ px4_add_romfs_files(
 	10019_gazebo-classic_omnicopter
 	10030_gazebo-classic_px4vision
 
+	12001_gazebo-classic_windrobo
+
 	10040_sihsim_quadx
 	10041_sihsim_airplane
 	10042_sihsim_xvert

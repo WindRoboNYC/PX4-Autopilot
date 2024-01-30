@@ -1,0 +1,38 @@
+networks:
+  emp-network:
+
+services:
+  simulation:
+    image: px4io/px4-dev-ros2-foxy:latest
+    container_name: px4
+    tty: true
+    volumes:
+      - ./:/src/PX4-Autopilot/:rw
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    privileged: true
+    networks:
+      - emp-network
+    environment:
+      - DISPLAY=:0
+  uxrce:
+    build:
+      context: .
+      dockerfile: xrce.Dockerfile
+    image: ubuntu-xrcedds-suite
+    container_name: uxrcedds
+    tty: true
+    networks:
+      - emp-network
+  qgc:
+    build:
+      context: .
+      dockerfile: qgc.Dockerfile
+    container_name: qgroundcontrol
+    environment:
+      - DISPLAY=:0
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    privileged: true
+    tty: true
+    networks:
+      - emp-network

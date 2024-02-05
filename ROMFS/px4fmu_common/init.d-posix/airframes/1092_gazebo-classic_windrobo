@@ -15,20 +15,20 @@ param set-default CA_ROTOR_COUNT 8
 
 # Other parameters
 
-param set COM_RCL_EXCEPT 7 # we are ignoring RC failsafes
-param set EKF2_RNG_CTRL 0 # Don't use rangefinder in altitude fusion
+#param set COM_RCL_EXCEPT 7 # we are ignoring RC failsafes
+#param set EKF2_RNG_CTRL 0 # Don't use rangefinder in altitude fusion
 
-param set MPC_Z_P 2
-param set MC_ROLLRATE_K 1
-param set MC_ROLLRATE_D 0.0028
-param set MC_ROLLRATE_I 0.225
+#param set MPC_Z_P 2
+#param set MC_ROLLRATE_K 1
+#param set MC_ROLLRATE_D 0.0028
+#param set MC_ROLLRATE_I 0.225
 
-param set MC_PITCHRATE_K 1
-param set MC_PITCHRATE_D 0.0038
-param set MC_PITCHRATE_I 0.225
+# param set MC_PITCHRATE_K 1
+#param set MC_PITCHRATE_D 0.0038
+# param set MC_PITCHRATE_I 0.225
 
-param set MC_YAWRATE_K 1
-param set MC_YAWRATE_I 0.18
+# param set MC_YAWRATE_K 1
+# param set MC_YAWRATE_I 0.18
 
 param set-default CA_ROTOR0_PX 0.35  # rotor 0,1
 param set-default CA_ROTOR0_PY 0.35

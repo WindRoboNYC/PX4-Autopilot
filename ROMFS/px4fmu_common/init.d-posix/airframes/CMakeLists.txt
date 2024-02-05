@@ -68,6 +68,8 @@ px4_add_romfs_files(
 	1062_flightgear_tf-r1
 	1070_gazebo-classic_boat
 
+	1092_gazebo-classic_windrobo
+
 	2507_gazebo-classic_cloudship
 
 	3010_jsbsim_quadrotor_x
@@ -94,8 +96,6 @@ px4_add_romfs_files(
 	10018_gazebo-classic_iris_foggy_lidar
 	10019_gazebo-classic_omnicopter
 	10030_gazebo-classic_px4vision
-
-	12001_gazebo-classic_windrobo
 
 	10040_sihsim_quadx
 	10041_sihsim_airplane

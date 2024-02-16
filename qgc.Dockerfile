@@ -17,5 +17,8 @@ RUN wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
 
 RUN chmod +x ./QGroundControl.AppImage
 
+# Install pygame using pip
+RUN pip install --user pygame
+
 RUN useradd -ms /bin/bash javi
 USER javi

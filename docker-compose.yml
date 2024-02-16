@@ -32,6 +32,7 @@ services:
       - DISPLAY=:0
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - /dev:/dev
     privileged: true
     tty: true
     networks:

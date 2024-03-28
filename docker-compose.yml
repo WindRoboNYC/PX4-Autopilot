@@ -37,3 +37,18 @@ services:
     tty: true
     networks:
       - emp-network
+  ros2:
+    build: 
+      context: .
+      dockerfile: /home/windrobo/windrobo/windrobo_ws/ros2_gazebo.Dockerfile
+    container_name: ros2
+    tty: true
+    networks:
+      - emp-network
+    environment:
+      - LOCAL_USER_ID=$(id -u)
+      - DISPLAY=:0
+    volumes:
+      - /home/windrobo/windrobo/windrobo_ws:/ros2
+      - /tmp/.X11-unix:/tmp/.X11-unix:ro
+    privileged: true

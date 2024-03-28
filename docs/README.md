@@ -138,7 +138,8 @@ services:
        ./QGroundControl.AppImage 
     ```
     go to application settings -> MAVLink, check the "Enable MAVLink forwarding" and modify the hostname 
-    ![image](![qgroundcontrol](https://github.com/WindRoboNYC/PX4-Autopilot/assets/86448021/d90e5f1f-032f-4d65-8ed2-745c2af1b46e))
+    ![image]((https://github.com/WindRoboNYC/PX4-Autopilot/assets/86448021/d90e5f1f-032f-4d65-8ed2-745c2af1b46e))
+    
     with
     ```
     simulation:18570

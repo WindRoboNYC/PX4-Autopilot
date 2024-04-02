@@ -3,17 +3,20 @@ networks:
 
 services:
   simulation:
-    image: px4io/px4-dev-ros2-foxy:latest
+    image: ros2_px4:v1
     container_name: px4
     tty: true
     volumes:
       - ./:/src/PX4-Autopilot/:rw
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - /home/windrobo/windrobo/windrobo_ws:/src/ros2_environment/windrobo_ws
     privileged: true
     networks:
       - emp-network
     environment:
       - DISPLAY=:0
+    depends_on:
+      - ros2
   uxrce:
     build:
       context: .

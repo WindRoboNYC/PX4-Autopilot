@@ -1,8 +1,10 @@
 ## Setup Environment
 
-Enter to [windrobo github organization](https://github.com/WindRoboNYC "windrobo github organization") and clone the following repositories:
+Enter to [windrobo github organization](https://github.com/WindRoboNYC "windrobo github organization") and clone with your preference url the following repositories:
 
-
+    git clone git@github.com:WindRoboNYC/PX4-Autopilot.git
+    git clone git@github.com:WindRoboNYC/windrobo_ws.git
+    git clone git@github.com:WindRoboNYC/Windrobo-PX4-SITL_gazebo-classic.git
 
  inside PX4-Autopilot directory:
  

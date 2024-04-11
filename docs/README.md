@@ -1,3 +1,20 @@
+## Setup Environment
+
+Enter to [windrobo github organization](https://github.com/WindRoboNYC "windrobo github organization") and clone the following repositories:
+
+
+
+ inside PX4-Autopilot directory:
+ 
+ ```bash
+ git checkout dev-arm
+bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
+sudo git submodule sync --recursive 
+sudo git submodule update --init --recursive
+sudo git submodule update --remote
+sudo pip install kconfiglib
+```
+
 ## Docker installation
 1. Before you install Docker Engine for the first time on a new host machine, you need to set up the Docker repository. Afterward, you can install and update Docker from the repository.
 ```

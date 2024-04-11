@@ -9,6 +9,9 @@
 
 . ${R}etc/init.d/rc.mc_defaults
 
+param set COM_RCL_EXCEPT 7 # we are ignoring RC failsafes
+param set EKF2_RNG_CTRL 0 # Don't use rangefinder in altitude fusion
+
 param set-default CA_AIRFRAME 0
 param set-default MAV_TYPE 14
 param set-default CA_ROTOR_COUNT 8

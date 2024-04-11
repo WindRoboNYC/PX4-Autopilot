@@ -3,7 +3,9 @@ networks:
 
 services:
   simulation:
-    image: ros2_px4:v1
+    build:
+      context: .
+      dockerfile: px4_ros.Dockerfile
     container_name: px4
     tty: true
     volumes:
@@ -41,7 +43,9 @@ services:
     networks:
       - emp-network
   ros2:
-    image: ros2_ws:v2
+    build: 
+      context: .
+      dockerfile: ros2.Dockerfile
     container_name: ros2
     tty: true
     networks:
@@ -52,4 +56,5 @@ services:
     volumes:
       - /home/windrobo/windrobo/windrobo_ws:/src/ros2_environment/windrobo_ws
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
+      - /home/windrobo/windrobo/PX4-Autopilot:/src/PX4-Autopilot
     privileged: true

@@ -18,7 +18,7 @@ services:
     environment:
       - DISPLAY=:0
     depends_on:
-      - ros2
+      - ros2-humble
   uxrce:
     build:
       context: .
@@ -42,7 +42,7 @@ services:
     tty: true
     networks:
       - emp-network
-  ros2:
+  ros2-humble:
     build: 
       context: .
       dockerfile: ros2.Dockerfile

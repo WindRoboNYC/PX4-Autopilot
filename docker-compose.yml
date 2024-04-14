@@ -2,7 +2,7 @@ networks:
   emp-network:
 
 services:
-  simulation:
+  simulation-humble:
     build:
       context: .
       dockerfile: px4_ros.Dockerfile

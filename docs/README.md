@@ -75,7 +75,7 @@ sudo docker run hello-world
    docker load -i nameoftheimage
    ```
 3. Create the docker-compose.yml file with the following code:
-```
+``` 
 
 networks:
   emp-network:

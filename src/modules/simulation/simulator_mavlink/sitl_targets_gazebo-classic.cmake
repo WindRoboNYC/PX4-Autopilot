@@ -110,6 +110,7 @@ if(gazebo_FOUND)
 	set(worlds
 		none
 		baylands
+		building
 		empty
 		ksql_airport
 		mcmillan_airfield

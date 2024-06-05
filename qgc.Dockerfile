@@ -12,6 +12,8 @@ RUN sudo apt install libpulse-mainloop-glib0 -y
 RUN sudo apt install wget
 RUN sudo apt install fuse3 -y
 RUN sudo apt-get install libxcb-xinerama0
+RUN apt install python3-pip -y
+RUN sudo pip install pygame
 
 RUN wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
 

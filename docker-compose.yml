@@ -38,6 +38,7 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix:ro
       - /dev:/dev
+      - /home/windrobo/windrobo/windrobo_ws:/src/ros2_environment/windrobo_ws
     privileged: true
     tty: true
     networks:

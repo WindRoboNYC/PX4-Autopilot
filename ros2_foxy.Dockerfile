@@ -29,7 +29,8 @@ RUN apt-get install -y python3-pip && \
     pip install pyserial && \
     pip install flask && \
     pip install flask-ask-sdk && \
-    pip install ask-sdk
+    pip install ask-sdk && \
+    pip install onnxruntime
 
 # Add the ROS 2 apt repository
 RUN apt install -y software-properties-common && \
@@ -93,6 +94,11 @@ RUN groupadd -g $GROUP_ID user && \
     echo "user ALL=(ALL) NOPASSWD:ALL" | tee -a /etc/sudoers
 
 USER user
+
+RUN sudo apt remove -y python3-pip && \
+    sudo wget https://bootstrap.pypa.io/get-pip.py && \
+    sudo python3 get-pip.py && \
+    sudo pip install onnxruntime
 
 # Source the ROS 2 setup script for the non-root user
 RUN echo "source /opt/ros/foxy/setup.bash" >> /home/user/.bashrc

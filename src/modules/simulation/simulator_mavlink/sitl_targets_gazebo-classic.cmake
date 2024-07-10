@@ -100,6 +100,7 @@ if(gazebo_FOUND)
 		standard_vtol_drop
 		s500
 		tailsitter
+		tarot_680
 		techpod
 		tiltrotor
 		typhoon_h480

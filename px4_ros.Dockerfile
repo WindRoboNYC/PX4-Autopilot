@@ -8,3 +8,11 @@ RUN apt-get update && \
 	apt-get install -y ros-foxy-ros2-control  && \
 	apt-get install -y ros-foxy-ros2-controllers && \
 	apt-get install -y ros-foxy-gazebo-ros2-control 
+
+# Install ultrasonic and camera plugins for gazebo
+RUN apt-get update && \
+	apt-get install -y ros-foxy-gazebo-ros-pkgs && \
+	apt-get install -y ros-foxy-gazebo-plugins
+
+# Source the setup script in the container's entrypoint or command
+CMD ["bash", "-c", "source /opt/ros/foxy/setup.bash && /bin/bash"]

@@ -29,8 +29,7 @@ RUN apt-get install -y python3-pip && \
     pip install pyserial && \
     pip install flask && \
     pip install flask-ask-sdk && \
-    pip install ask-sdk && \
-    pip install onnxruntime
+    pip install ask-sdk
 
 # Add the ROS 2 apt repository
 RUN apt install -y software-properties-common && \
